@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link type="text/css" rel="stylesheet" href="main.css" />
+  <script src="./main.js"></script>
+</head>
+
+<body class="body" onload="schedule()">
+
+  <div>
+    <div class="month">
+      <button class="btn" id="btn" type="submit" onclick="help()"><img class="btn-img" src="도움말.png" width="20px"
+          height="20px" align="right"></button>
+      <button class="btn" id="btn_2" type="submit" onclick="find()"><img class="btn-img" src="돋보기.png" width="20px"
+          height="20px" align="right"></button>
+      <ul>
+        <li class="prev" onclick="prevM()"> &#10094; </li>
+        <li class="fix" id="yearMonth"></li>
+        <li class="next" onclick="nextM()"> &#10095; </li>
+      </ul>
+    </div>
+
+
+  </div>
+  <table class="days" border="0px">
+    <tr>
+      <td class="dayday">일</td>
+      <td class="dayday">월</td>
+      <td class="dayday">화</td>
+      <td class="dayday">수</td>
+      <td class="dayday">목</td>
+      <td class="dayday">금</td>
+      <td class="dayday">토</td>
+    </tr>
+  </table>
+  <table id="calendar" align="center" border="0px">
+    <script>
+      showC();
+      function help() {
+        var a = confirm('도움말을 보시겠습니까?');
+        if (a) {
+          alert('이 웹사이트는 완벽한 시간을 위해 만들어 졌습니다\n사용법은 매우 간단합니다.\n');
+          alert('1.일정은 색깔에 따라 나뉘어 집니다\n2.학사일정->분홍색 , 기념일->주황색 , 둘 다->보라색 , 오늘->빨간색\n3.마지막으로 원하는 날짜를 클릭하면 그 날에 어떤 행사들이 있는 지 알람을 띄워 줍니다.');
+        }
+      }
+      function find() {
+        var b = confirm('원하는 날짜의 일정을 찾으시겠습니까?');
+        if (b) {
+          var year = parseInt(prompt("년을 입력하세요."));
+          var month = parseInt(prompt("월을 입력하세요."));
+          var day = parseInt(prompt("일을 입력하세요."));
+          findday(year,month,day);
+      }
+    }
+    </script>
+  </table>
+
+
+</body>
+
+</html>

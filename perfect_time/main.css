@@ -1,0 +1,87 @@
+ul {list-style-type: none;}
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Nanum Gothic', sans-serif;
+} 
+.body{
+    background-color: #6b81ca;
+
+}
+#calendar {
+    width: 100%;
+}
+
+/* Month header */
+.month {
+    padding: 70px 25px;
+    height: 3vh;
+    background: #6b81ca;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: rgb(255, 255, 255);    
+    font-size: 205%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+}
+
+.month .fix {
+    display: inline;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+   
+}
+
+.weekdays li  {
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+}
+/* Days (1-31) */
+.days {
+    width: 100%;
+    font-size: 15px;
+}
+
+.days td {
+    padding: 1.5rem 0;
+    margin: 0px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+td {
+    padding: 1.5rem 0;
+    margin: 0px;
+    text-align:center;
+    background-color: rgb(255, 255, 255);
+    border-spacing: 2px;
+    border-collapse: separate;
+    font-size: 25px;
+}
+
+td:not(.dayday):hover {
+    background-color: #acacac;
+ }
